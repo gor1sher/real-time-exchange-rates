@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="739facfa-ff5b-4597-8e87-7b6e199d6ea3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/real-time-exchange-rates.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/ExchangeRateApllication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/controller/CurrencyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/CurrencyMappers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/repository/CurrencyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/ExchangeRate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/CurrencyExchangeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/ExchangeRateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/TinkoffExchangeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourses/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourses/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourses/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourses/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/exchange/rates/CurrencyControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/exchange/rates/CurrencyRepositoryTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2poa3a0L9XwQ9vbGXw2vqsLyw6j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ExchangeRateApllication.executor": "Run",
+    "JUnit.CurrencyControllerTest.TesGetCurrency.executor": "Run",
+    "JUnit.CurrencyRepositoryTest.executor": "Run",
+    "JUnit.CurrencyRepositoryTest.testSave.executor": "Run",
+    "Maven.rates [clean,install].executor": "Run",
+    "Maven.real-time-exchange-rates [clean,install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/Users/gor/IdeaProjects/real-time-exchange-rates/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.exchange.rates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CurrencyRepositoryTest.testSave">
+    <configuration name="ExchangeRateApllication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="token" value="10923fb630c74556b7da2e82ebbfce75" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="ru.exchange.rates.ExchangeRateApllication" />
+      <module name="real-time-exchange-rates" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.exchange.rates.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyControllerTest.TesGetCurrency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="real-time-exchange-rates" />
+      <option name="PACKAGE_NAME" value="ru.exchange.rates" />
+      <option name="MAIN_CLASS_NAME" value="ru.exchange.rates.CurrencyControllerTest" />
+      <option name="METHOD_NAME" value="TesGetCurrency" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="real-time-exchange-rates" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.exchange.rates.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.exchange.rates" />
+      <option name="MAIN_CLASS_NAME" value="ru.exchange.rates.CurrencyRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyRepositoryTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="real-time-exchange-rates" />
+      <option name="PACKAGE_NAME" value="ru.exchange.rates" />
+      <option name="MAIN_CLASS_NAME" value="ru.exchange.rates.CurrencyRepositoryTest" />
+      <option name="METHOD_NAME" value="testSave" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ExchangeRateApllication" />
+      <item itemvalue="JUnit.CurrencyControllerTest.TesGetCurrency" />
+      <item itemvalue="JUnit.CurrencyRepositoryTest" />
+      <item itemvalue="JUnit.CurrencyRepositoryTest.testSave" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CurrencyRepositoryTest.testSave" />
+        <item itemvalue="JUnit.CurrencyRepositoryTest" />
+        <item itemvalue="JUnit.CurrencyControllerTest.TesGetCurrency" />
+        <item itemvalue="Application.ExchangeRateApllication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="739facfa-ff5b-4597-8e87-7b6e199d6ea3" name="Changes" comment="" />
+      <created>1733434689550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733434689550</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
