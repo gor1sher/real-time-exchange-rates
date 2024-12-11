@@ -2,20 +2,23 @@ package ru.exchange.rates.dal.mappers;
 
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
-import ru.exchange.rates.model.ExchangeRate;
+import ru.exchange.rates.model.Currency;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
 @Component
-public class CurrencyMappers implements RowMapper<ExchangeRate> {
+public class CurrencyMappers implements RowMapper<Currency> {
 
     @Override
-    public ExchangeRate mapRow(ResultSet rs, int rowNum) throws SQLException {
-        ExchangeRate exchangeRate = new ExchangeRate();
+    public Currency mapRow(ResultSet rs, int rowNum) throws SQLException {
+        Currency exchangeRate = new Currency();
 
-        exchangeRate.setCurrency(rs.getString("name"));
-        exchangeRate.setCurrencyPrice(rs.getDouble("priceUSD"));
+        exchangeRate.setName(rs.getString("name"));
+        exchangeRate.setPriceByUSD(rs.getDouble("priceUSD"));
+        Timestamp timestamp = rs.getTimestamp("date_of_the_exchange_rate");
+        exchangeRate.setLocalDate(timestamp.toLocalDateTime().toLocalDate());
 
         return exchangeRate;
     }

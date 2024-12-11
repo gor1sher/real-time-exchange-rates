@@ -1,13 +1,17 @@
 package ru.exchange.rates.model;
 
-public enum Currency {
-    RUB,
-    USD,
-    EUR,
-    GBP,
-    HKD,
-    CHF,
-    JPY,
-    CNY,
-    TRY
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+import java.time.LocalDate;
+
+@Data
+@AllArgsConstructor
+public class Currency {
+    private String name;
+    private Double priceByUSD;
+    private LocalDate localDate;
+
+    public Currency() {
+    }
 }

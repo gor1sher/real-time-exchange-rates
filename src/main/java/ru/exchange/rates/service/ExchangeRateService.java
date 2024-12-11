@@ -1,8 +1,11 @@
 package ru.exchange.rates.service;
 
-import ru.exchange.rates.model.ExchangeRate;
+import ru.exchange.rates.model.Currency;
+
+import java.util.List;
 
 public interface ExchangeRateService {
 
-    public ExchangeRate getCurrency();
+    public List<Currency> exchangeRateList();
+    public Currency getExpensesCurrency(String currency);
 }
