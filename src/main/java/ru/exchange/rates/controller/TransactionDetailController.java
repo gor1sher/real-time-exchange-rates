@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/expenses")
 @AllArgsConstructor
-public class ExpensesController {
+public class TransactionDetailController {
 
     @NonNull
     private TransactionDetailService transactionDetailService;
