@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.exchange.rates.dal.repository.CurrencyRepository;
 import ru.exchange.rates.dal.repository.ExpenseRepository;
+import ru.exchange.rates.dal.repository.LimitRepository;
 import ru.exchange.rates.model.Currency;
 import ru.exchange.rates.model.ExpenseModel;
 
@@ -20,6 +21,9 @@ public class ExpensesService {
     @NonNull
     private CurrencyRepository currencyRepository;
 
+    @NonNull
+    private LimitRepository limitRepository;
+
     public List<ExpenseModel> getExpenses() {
         return expenseRepository.getExpenses();
     }
@@ -34,6 +38,10 @@ public class ExpensesService {
 
     public void addExpense(ExpenseModel expenseModel) {
         expenseRepository.save(expenseModel);
+    }
+
+    public void addLimit(Long userId, Integer limit){
+        limitRepository.save(userId, limit);
     }
 
     public List<ExpenseModel> findByIdExpenses(Long id) {

@@ -20,7 +20,7 @@ public class ExpenseMappers implements RowMapper<ExpenseModel> {
         expenseModel.setLimit(rs.getDouble("expense_limit"));
         expenseModel.setLimitExceeded(rs.getBoolean("limit_exceeded"));
         Timestamp timestamp = rs.getTimestamp("localDate");
-        expenseModel.setLocalDateTime(timestamp.toLocalDateTime());
+        expenseModel.setLocalDate(timestamp.toLocalDateTime().toLocalDate());
 
         return expenseModel;
     }

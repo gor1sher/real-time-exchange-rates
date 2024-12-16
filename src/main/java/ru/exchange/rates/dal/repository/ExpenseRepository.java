@@ -30,6 +30,6 @@ public class ExpenseRepository {
 
     public void save(ExpenseModel expenseModel) {
         jdbc.update(INSERT,expenseModel.getUserId(), expenseModel.getExpense(), expenseModel.getLimit(),
-                expenseModel.getLimitExceeded(), expenseModel.getLocalDateTime());
+                expenseModel.getLimitExceeded(), expenseModel.getLocalDate());
     }
 }

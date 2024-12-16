@@ -23,15 +23,24 @@ public class ExpensesController {
 
     @GetMapping("/{userId}/{currency}")
     public Double getExpensesByCurrency(@PathVariable(name = "userId") Long userId,
-                                              @PathVariable(name = "currency") String currency){
+                                        @PathVariable(name = "currency") String currency) {
 
         return expensesService.getExpensesByCurrency(userId, currency);
     }
 
     @PostMapping("/{userId}")
-    public void addExpense(@RequestBody ExpenseModel expenseModel, @PathVariable(name = "userId") Long userId) {
+    public void addExpense(@PathVariable(name = "userId") Long userId,
+                           @RequestBody ExpenseModel expenseModel) {
+
         ExpenseModel checkExpense = checkLimit(expenseModel, userId);
         expensesService.addExpense(checkExpense);
+    }
+
+    @PostMapping("/{userId}/limit")
+    public void setLimit(@PathVariable(name = "userId") Long userId,
+                         @RequestBody Integer limit) {
+
+        expensesService.addLimit(userId, limit);
     }
 
     private ExpenseModel checkLimit(ExpenseModel expenseModel, Long id) {
