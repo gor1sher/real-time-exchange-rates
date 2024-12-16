@@ -3,8 +3,8 @@ package ru.exchange.rates.dal.repository;
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import ru.exchange.rates.dal.mappers.ExpenseMappers;
-import ru.exchange.rates.model.ExpenseModel;
+import ru.exchange.rates.dal.mappers.TransactionalDetailMappers;
+import ru.exchange.rates.model.TransactionDetail;
 
 import java.util.List;
 
@@ -13,23 +13,23 @@ import java.util.List;
 public class ExpenseRepository {
 
     private final JdbcTemplate jdbc;
-    private ExpenseMappers expenseMappers;
+    private TransactionalDetailMappers transactionalDetailMappers;
 
     private static final String FIND_ALL = "SELECT * FROM expenses";
     private static final String FIND_BY_ID = "SELECT * FROM expenses WHERE client_id = ?";
     private static final String INSERT = "INSERT INTO expenses (expense, expense_limit, limit_exceeded, localDate) " +
             "VALUES (?, ?, ?, ?)";
 
-    public List<ExpenseModel> getExpenses() {
-        return jdbc.query(FIND_ALL, expenseMappers);
+    public List<TransactionDetail> getExpenses() {
+        return jdbc.query(FIND_ALL, transactionalDetailMappers);
     }
 
-    public List<ExpenseModel> findById(Long id) {
-        return (List<ExpenseModel>) jdbc.queryForObject(FIND_BY_ID, expenseMappers, id);
+    public List<TransactionDetail> findById(Long id) {
+        return (List<TransactionDetail>) jdbc.queryForObject(FIND_BY_ID, transactionalDetailMappers, id);
     }
 
-    public void save(ExpenseModel expenseModel) {
-        jdbc.update(INSERT,expenseModel.getUserId(), expenseModel.getExpense(), expenseModel.getLimit(),
-                expenseModel.getLimitExceeded(), expenseModel.getLocalDate());
+    public void save(TransactionDetail transactionDetail) {
+        jdbc.update(INSERT, transactionDetail.getUserId(), transactionDetail.getExpense(), transactionDetail.getLimit(),
+                transactionDetail.getLimitExceeded(), transactionDetail.getDateOfExpense());
     }
 }

@@ -16,9 +16,9 @@ public class CurrencyMappers implements RowMapper<Currency> {
         Currency exchangeRate = new Currency();
 
         exchangeRate.setName(rs.getString("name"));
-        exchangeRate.setPriceByUSD(rs.getDouble("priceUSD"));
+        exchangeRate.setPriceInUSD(rs.getDouble("priceUSD"));
         Timestamp timestamp = rs.getTimestamp("date_of_the_exchange_rate");
-        exchangeRate.setLocalDate(timestamp.toLocalDateTime().toLocalDate());
+        exchangeRate.setDateOfCourseUpdate(timestamp.toLocalDateTime().toLocalDate());
 
         return exchangeRate;
     }

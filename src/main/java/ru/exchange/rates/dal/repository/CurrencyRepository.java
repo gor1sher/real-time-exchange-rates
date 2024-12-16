@@ -36,7 +36,16 @@ public class CurrencyRepository {
         return jdbc.query(FIND_BY_DATE, currencyMappers, localDate);
     }
 
-    public void save(Currency exchangeRate) {
-        jdbc.update(INSERT, exchangeRate.getName(), exchangeRate.getPriceByUSD(), exchangeRate.getLocalDate());
+    public void saveAll(List<Currency> currencyList){
+        List<Object[]> batchArgs = currencyList
+                .stream()
+                .map(currency -> new Object[]{
+                        currency.getName(),
+                        currency.getPriceInUSD(),
+                        currency.getDateOfCourseUpdate()
+                })
+                .toList();
+
+        jdbc.batchUpdate(INSERT, batchArgs);
     }
 }

@@ -3,13 +3,12 @@ package ru.exchange.rates.model;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Data
-public class ExpenseModel {
+public class TransactionDetail {
     private Long userId;
     private Double expense;
     private Double limit;
     private Boolean limitExceeded;
-    private LocalDate localDate;
+    private LocalDate dateOfExpense;
 }

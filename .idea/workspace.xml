@@ -6,15 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="739facfa-ff5b-4597-8e87-7b6e199d6ea3" name="Changes" comment="тз">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/LimitMappers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/repository/LimitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/LimitModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/TransactionalDetailMappers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real-time-exchange-rates.iml" beforeDir="false" afterPath="$PROJECT_DIR$/real-time-exchange-rates.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/ExchangeRateApllication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/ExchangeRateApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/controller/CurrencyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/controller/ExpensesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/controller/ExpensesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/ExpenseMappers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/ExpenseMappers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/CurrencyMappers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/CurrencyMappers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/ExpenseMappers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/mappers/LimitMappers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/repository/CurrencyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/repository/CurrencyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/repository/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/repository/ExpenseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/ExpenseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/ExpenseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/ExpensesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/ExpensesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourses/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourses/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/dal/repository/LimitRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/exception/ConditionsNotMetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/exception/ConditionsNotMetException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/ExpenseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/TransactionDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/model/LimitModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/CurrencyExchangeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/CurrencyExchangeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/ExchangeRateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/ExchangeRateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/ExpensesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/TransactionDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourсes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourсes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourсes/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/exchange/rates/CurrencyControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/exchange/rates/CurrencyRepositoryTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +50,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2poa3a0L9XwQ9vbGXw2vqsLyw6j" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,6 +62,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ExchangeRateApllication.executor": "Run",
+    "Application.ExchangeRateApplication.executor": "Run",
     "JUnit.CurrencyControllerTest.TesGetCurrency.executor": "Run",
     "JUnit.CurrencyRepositoryTest.executor": "Run",
     "JUnit.CurrencyRepositoryTest.testSave.executor": "Run",
@@ -65,12 +84,12 @@
       <recent name="ru.exchange.rates" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExchangeRateApllication">
-    <configuration name="ExchangeRateApllication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.ExchangeRateApplication">
+    <configuration name="ExchangeRateApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="token" value="10923fb630c74556b7da2e82ebbfce75" />
       </envs>
-      <option name="MAIN_CLASS_NAME" value="ru.exchange.rates.ExchangeRateApllication" />
+      <option name="MAIN_CLASS_NAME" value="ru.exchange.rates.ExchangeRateApplication" />
       <module name="real-time-exchange-rates" />
       <extension name="coverage">
         <pattern>
@@ -118,14 +137,14 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ExchangeRateApllication" />
+      <item itemvalue="Application.ExchangeRateApplication" />
       <item itemvalue="JUnit.CurrencyControllerTest.TesGetCurrency" />
       <item itemvalue="JUnit.CurrencyRepositoryTest" />
       <item itemvalue="JUnit.CurrencyRepositoryTest.testSave" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ExchangeRateApllication" />
+        <item itemvalue="Application.ExchangeRateApplication" />
         <item itemvalue="JUnit.CurrencyRepositoryTest.testSave" />
         <item itemvalue="JUnit.CurrencyRepositoryTest" />
         <item itemvalue="JUnit.CurrencyControllerTest.TesGetCurrency" />
@@ -157,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733943240773</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="тз">
+      <option name="closed" value="true" />
+      <created>1734357844403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734357844403</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -171,11 +198,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/exchange/rates/service/ExpensesService.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -13,9 +13,3 @@ CREATE TABLE IF NOT EXISTS expenses(
     limit_exceeded BOOLEAN,
     localDate DATE
 );
-
-CREATE TABLE IF NOT EXISTS limits(
-    client_id INTEGER,
-    limit INTEGER,
-    localDate DATE
-);

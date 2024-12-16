@@ -2,7 +2,7 @@ package ru.exchange.rates.exception;
 
 public class ConditionsNotMetException extends RuntimeException {
 
-    public ConditionsNotMetException(String str) {
-        super(str);
+    public ConditionsNotMetException(String message) {
+        super(message);
     }
 }

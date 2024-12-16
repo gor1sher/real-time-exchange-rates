@@ -1,6 +1,5 @@
 package ru.exchange.rates.service;
 
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -19,55 +18,45 @@ import java.util.Map;
 public class CurrencyExchangeService implements ExchangeRateService{
 
     @Value("${api.token}")
-    private String token;
+    private  String token;
 
     @Value("${api.url}")
-    private String urlApi;
+    private  String urlApi;
 
-    @NonNull
     private final RestTemplate restTemplate;
+    private final CurrencyRepository currencyRepository;
 
-    @NonNull
-    private CurrencyRepository currencyRepository;
-
-    public List<Currency> exchangeRateList() {
-        return checkDataForCurrency();
+    public List<Currency> listCourse() {
+        return fetchExchangeRateAndReturn();
     }
 
-    public Currency getExpensesCurrency(String currency) {
-        return null;
-    }
-
-    private List<Currency> updateExchangeRate() {
-        String url = String.format("%s?app_id=%s&base=%s",
+    private List<Currency> retrieveExchangeRateFromAPI() {
+        var url = String.format("%s?app_id=%s&base=%s",
                 urlApi, token, "USD");
 
-        Map<String, Object> response = restTemplate.getForObject(url, Map.class);
+        var response = restTemplate.getForObject(url, Map.class);
 
         if (response == null) {
             throw new ConditionsNotMetException("нет внешних данных для обновления курса");
         }
 
-        List<Currency> rs = new ArrayList<>();
-        Map<String, Object> rates = (Map<String, Object>) response.get("rates");
-        for (Map.Entry<String, Object> entry : rates.entrySet()) {
-            Object value = entry.getValue();
-            Double rate = (value instanceof Integer) ? ((Integer) value).doubleValue() : (Double) value;
-
-            rs.add(new Currency(entry.getKey(), rate, LocalDate.now()));
-
-            currencyRepository.save(new Currency(entry.getKey(), rate, LocalDate.now()));
+        List<Currency> ratesList = new ArrayList<>();
+        Map<String, Object> fetchRatesFromResponse = (Map<String, Object>) response.get("fetchRatesFromResponse");
+        if (fetchRatesFromResponse == null) {
+            throw new IllegalStateException("Response from API is null");
         }
-        return rs;
+        fetchRatesFromResponse.entrySet().forEach(entry -> {
+            Object value = entry.getValue();
+            Double rate = (value instanceof Integer v) ? (v).doubleValue() : (Double) value;
+            ratesList.add(new Currency(entry.getKey(), rate, LocalDate.now()));
+        });
+
+        currencyRepository.saveAll(ratesList);
+        return ratesList;
     }
 
-    //если данные по курсам свежие, то будут браться из бд
-    private List<Currency> checkDataForCurrency() {
+    private List<Currency> fetchExchangeRateAndReturn() {
         List<Currency> list = currencyRepository.getDateOfTheExchangeRate(LocalDate.now());
-        if (list.isEmpty()) {
-            return updateExchangeRate();
-        } else {
-            return list;
-        }
+        return list.isEmpty() ? retrieveExchangeRateFromAPI() : list;
     }
 }
